@@ -1,0 +1,193 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+
+/*** SWITCH BUTTON STYLING ***/
+
+#Quiz, #ToDo  {
+    display:none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    top: -4px !important;
+  }
+  
+.switch input {
+    opacity: 0 !important;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #007bff;  
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider {
+    box-shadow: 0 0 5px #007bff !important;
+}
+
+input:checked + .slider.s2.round {
+    background-color: #352f5b;  
+}
+
+input:focus + .slider.s2.round {
+    box-shadow: 0 0 1px #352f5b;
+}
+
+input:checked + .slider.s2.round {
+    box-shadow: 0 0 5px #352f5b !important;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.showElement:first-of-type {
+    margin-top:0 !important;
+}
+
+.showElement {
+    display:block !important;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.display-3 {
+    font-size:50px !important;
+}
+
+/********** Quiz Program **********/
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+/********** To-Do List **********/
+
+.bg-primary2  {
+    background-color:#352f5b;
+    padding:75px 0 !important;
+}
+
+.btn-purple {
+    background-color:#423a6f !important;
+    color:white !important;
+    width:100%;
+    margin-top:15px;
+    border:3px solid transparent !important;
+}
+
+.btn-purple:hover {
+    background-color:#352f5b !important;
+    border:3px solid #423a6f !important;
+}
+
+.text-primary2 {
+    color:#352f5b;
+}
+
+input[type=text],
+input[type=text]:focus{
+    color: #fff;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    margin:0 !important;
+}
+
+.todos li {
+    background: #423a6f;
+    color:#fff;
+}
+
+.delete{
+    cursor: pointer;
+}
+
+#msg {
+    display:none;
+    font-size:22.5px;
+    text-align: center !important;
+}
+
+.filtered {
+    display: none !important;
+}
+
+#NoneResults { 
+    text-align: center;
+}
+
+#q1_error, #q2_error,
+#q3_error, #q4_error {
+    width:300px;
+    margin-top:20px;
+    padding:7.5px 15px;
+    margin-left:25px;
+    display:none;
+}

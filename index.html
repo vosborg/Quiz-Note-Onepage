@@ -1,0 +1,250 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ae8586830d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row mb-2 text-center">
+
+            <h1 class="mb-5">One Page Application</h1> 
+
+            <div class="col-3 offset-3">
+                <p class="lead font-weight-normal">Quiz Program</p>
+                <label class="switch" id="switch_quiz">
+                    <input type="checkbox" id="cb_quiz" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="col-3">
+                <p class="lead font-weight-normal">To Do List</p>
+                <label class="switch" id="switch_todo">
+                    <input type="checkbox" id="cb_todo">
+                    <span class="slider s2 round"></span>
+                </label>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="Quiz" class="showElement">
+
+        <div class="intro py-3 bg-white text-center">
+            <div class="container">
+                <h2 class="text-primary display-3 mt-4">Quiz: Mercedes-Benz</h2>
+            </div>
+        </div>
+
+        <div class="result py-4 bg-light d-none text-center">
+            <div class="container lead">
+                <p>You completed <span class="text-primary display-4 p-3">0%</span> of the quiz</p>
+            </div>
+        </div>
+
+        <div class="quiz py-4 bg-primary">
+            <div class="container">
+                <h2 class="my-5 text-white"> On with the questions....</h2>
+
+                <form class="quiz-form text-light">
+                    
+                    <!-- Question 1 -->
+                    <div class="my-5 questions" id="q1">
+                        <p class="lead font-weight-normal">1. The logo of Mercedes is an iconic three-pointed star. What does it stand for?</p>
+
+                        <div class="col-3">
+                            <p class="questionsCheck d-none">Correct answer:<br/>Air, sea, and land</p>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" id="q11" value="A" class="radio">
+                            <label class="form-check-label">Air, sea, and land</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" id="q12" value="B" class="radio">
+                            <label class="form-check-label">Three states where Mercedes has the operating offices</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" id="q13" value="C" class="radio">
+                            <label class="form-check-label">The three sons of Mercedes’s founder</label>
+                        </div>
+
+                        <div id="q1_error" class="alert alert-danger" role="alert">
+                            Please select an option above!
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="my-5 questions" id="q2">
+                        <p class="lead font-weight-normal">2. Which German corporation is the owner of Mercedes-Benz?</p>
+
+                        <div class="col-3">
+                            <p class="questionsCheck d-none">Correct answer:<br/>Daimler</p>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" id="q21" value="A" class="radio">
+                            <label class="form-check-label">Porsche</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" id="q22" value="B" class="radio">
+                            <label class="form-check-label">BMW</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" id="q23" value="C" class="radio">
+                            <label class="form-check-label">Daimler</label>
+                        </div>
+
+                        <div id="q2_error" class="alert alert-danger" role="alert">
+                            Please select an option above!
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="my-5 questions" id="q3">
+                        <p class="lead font-weight-normal">3. In which year Mercedes was officially founded?</p>
+
+                        <div class="col-3">
+                            <p class="questionsCheck d-none">Correct answer:<br/>1926</p>
+                         </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" id="q31" value="A" class="radio">
+                            <label class="form-check-label">1916</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" id="q32" value="B" class="radio">
+                            <label class="form-check-label">1926</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" id="q33" value="C" class="radio">
+                            <label class="form-check-label">1936</label>
+                        </div>
+
+                        <div id="q3_error" class="alert alert-danger" role="alert">
+                            Please select an option above!
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="my-5 questions" id="q4">
+                        <p class="lead font-weight-normal">4. The name “Mercedes” is named after which person?</p>
+
+                        <div class="col-3">
+                            <p class="questionsCheck d-none">Correct answer:<br/>The daughter of the first buyer</p>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" id="q41" value="A" class="radio">
+                            <label class="form-check-label">The horse of the founder</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" id="q42" value="B" class="radio">
+                            <label class="form-check-label">The daughter of the first buyer</label>
+                        </div>
+
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" id="q43" value="C" class="radio">
+                            <label class="form-check-label">A powerful god in Roman mythology</label>
+                        </div>
+
+                        <div id="q4_error" class="alert alert-danger" role="alert">
+                            Please select an option above!
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-light" value="Check answers" id="check">
+                        <input type="submit" class="btn btn-light disabled" value="Try again" id="reset">
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div><!-- Quiz -->
+
+
+
+    <div id="ToDo">
+
+        <div class="intro py-3 bg-white text-center">
+            <div class="container">
+                <h2 class="text-primary2 display-3 mt-4">To-Do List</h2>
+            </div>
+        </div>
+
+        <div class="quiz bg-primary2">
+            <div class="container">
+
+                <label id="msg" class="text-light font-weight-bold mb-4"></label>
+
+                <div class="col-4 m-auto mb-5">
+                    <form class="search">
+                        <input class="form-control m-auto" type="text" name="search" placeholder="Search To Do's">
+                    </form>
+                </div>
+
+                <div class="col-4 m-auto mb-5">
+
+                    <div id="NoneResults" class="alert alert-danger">
+                        No search results found!
+                    </div>
+
+                    <ul class="list-group todos mx-auto text-light">
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="title">play mariokart</span>
+                            <i class="far fa-trash-alt delete"></i>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="title">defeat ganon in zelda</span>
+                            <i class="far fa-trash-alt delete"></i>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="title">make a veggie pie</span>
+                            <i class="far fa-trash-alt delete"></i>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-4 m-auto">
+                    <form class="add text-center">
+                        <label class="lead text-light mb-2">Create new To-Do:</label>
+                        <input class="form-control m-auto" type="text" name="add" id="addValue"/>
+                        <input type="submit" class="btn btn-purple" value="Add To-Do" id="add_todo">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br /><br /><br /><br /><br /><br />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
